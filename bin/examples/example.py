@@ -3,11 +3,11 @@ Created on Apr 7, 2013
 
 @author: mbertram
 '''
-import stirplate, time
+import stirplateAPI, time
 
 
 """ connect to the stir plate."""
-device = stirplate.stirPlate()
+device = stirplateAPI.stirPlate()
 
 device.connect()
 #device.Off()
