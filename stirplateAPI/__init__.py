@@ -107,7 +107,7 @@ class stirPlate():
         Desc: 
         """
         
-        assert flRPM <= 1600
+        assert flRPM <= 1540.0 #Fix this at some point
         
         linear_constant = 5.19/1600.0 # volts/RPM
         
@@ -124,7 +124,7 @@ class stirPlate():
             self.d.writeRegister(DAC1_REGISTER, new_stir_speed) # Set DAC0 to 0.02V to turn plate off
             self.stir_speed = str(new_stir_speed/linear_constant)
             
-            if flRPM == 0:
+            if flRPM == 0.0:
                 self.Off()
             print "Stir plate set to: " +  self.stir_speed + " RPM"
 
